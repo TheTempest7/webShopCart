@@ -1,0 +1,110 @@
+.header__downside {
+  background-color: #2C2E30;
+  padding: 12px 0px;
+}
+
+.downSideHeader__body {
+  display: flex;
+  align-items: center;
+}
+
+.downSideHeader__allGoods {
+  flex: 0 0 12%;
+  margin-right: 24px;
+}
+
+.allGoods__body {
+  display: flex;
+  background-color: #DF1638;
+  padding: 16px 32px;
+}
+
+.allGoods__lines {
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.allGoods__line {
+  width: 18px;
+  height: 2px;
+  background-color: white;
+}
+
+.allGoods__line:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.allGoods__inscription {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.downSideHeader__search {
+  flex: 1 1 70%;
+}
+
+.searchBlock__body {
+  display: flex;
+}
+
+.searchBlock__whiteSpace {
+  flex: 1 1 90%;
+  display: flex;
+  margin-right: 4px;
+}
+
+.searchBlock__whiteSpace-body {
+  padding-left: 10px;
+  min-height: 48px;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Aclonica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(45, 45, 45, 0.6);
+}
+.searchBlock__whiteSpace-body::placeholder {
+  padding-left: 30px;
+  height: 100%;
+  background: url(../img/headerDownsideIcons/search.svg) no-repeat;
+}
+
+/*
+.searchBlock__whiteSpace-body::placeholder{
+background: url(../img/headerDownsideIcons/search.svg) no-repeat;
+}*/
+.searchBlock__btn {
+  flex: 0 0 48px;
+  display: flex;
+}
+
+.searchBlock__link {
+  flex: 0 0 100%;
+  background-color: #DF1638;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downSideHeader__icons {
+  flex: 1 1 15%;
+}
+
+.iconsHeader__body {
+  display: flex;
+  justify-content: space-around;
+  height: 48px;
+  align-items: center;
+}

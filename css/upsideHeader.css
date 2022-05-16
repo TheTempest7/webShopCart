@@ -1,0 +1,209 @@
+.header__upside {
+  background-color: #494C50;
+  padding: 17px 0px;
+}
+
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.upSideHeader__body {
+  display: flex;
+  align-items: center;
+}
+
+.upSideHeader__logo-container {
+  width: 180px;
+  height: 40px;
+}
+
+.upSideHeader__schedule {
+  display: flex;
+  flex: 1 1 23%;
+  justify-content: center;
+}
+
+.schedule__clock-container {
+  margin-right: 10px;
+}
+
+.schedule__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule__span {
+  sfont-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.upSideHeader__navigation {
+  flex: 1 1 43%;
+}
+
+.navigation__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__link {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/*-----------------------select  with phone numbers----------------------*/
+.upSideHeader__select .headSelect__header-icon svg {
+  transform: rotate3d(1, 0, 0, 180deg);
+  -webkit-transform: rotate3d(1, 0, 0, 180deg);
+  -moz-transform: rotate3d(1, 0, 0, 180deg);
+  -ms-transform: rotate3d(1, 0, 0, 180deg);
+  -o-transform: rotate3d(1, 0, 0, 180deg);
+  transition: all 0.8s ease 0.2s;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -moz-transition: all 0.8s ease 0.2s;
+  -ms-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+}
+
+.upSideHeader__select.active .headSelect__body {
+  opacity: 0;
+  visibility: hidden;
+}
+.upSideHeader__select.active .headSelect__header-icon svg {
+  transform: rotate3d(1, 1, 1, 0deg);
+  -webkit-transform: rotate3d(1, 1, 1, 0deg);
+  -moz-transform: rotate3d(1, 1, 1, 0deg);
+  -ms-transform: rotate3d(1, 1, 1, 0deg);
+  -o-transform: rotate3d(1, 1, 1, 0deg);
+}
+
+.headSelect {
+  position: relative;
+  flex: 1 1 15.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headSelect__header {
+  background-color: #494C50;
+  display: flex;
+}
+
+.headSelect__header-content {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.headSelect__header-icon {
+  margin-left: 8px;
+  cursor: pointer;
+  background-color: #3A3D40;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.headSelect__header-icon svg {
+  position: relative;
+  left: -0.5px;
+}
+
+.headSelect__body {
+  opacity: 0.8;
+  visibility: visible;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.8s ease 0.2s;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -moz-transition: all 0.8s ease 0.2s;
+  -ms-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  transform: translateY(20px) translateX(-5px);
+  -webkit-transform: translateY(20px) translateX(-5px);
+  -moz-transform: translateY(20px) translateX(-5px);
+  -ms-transform: translateY(20px) translateX(-5px);
+  -o-transform: translateY(20px) translateX(-5px);
+}
+
+.headSelect__body-item {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.headSelect__link {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: #F2A2AF;
+  border-bottom: 1px dashed #F2A2AF;
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+/*-----------------------select  with phone numbers----------------------*/
+.upSideHeader__lang {
+  flex: 0 0 94px;
+}
+
+.lang__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang__uk {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lang__bar {
+  width: 2px;
+  height: 16px;
+  background-color: #6D7073;
+}
+
+.lang__ru {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
