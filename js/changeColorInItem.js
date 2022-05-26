@@ -4,7 +4,7 @@ let allCartItems=document.body.querySelectorAll('.cartSpace__item');
 allCartItems.forEach(item=>{
     item.addEventListener('mouseover',()=>{
         let allColorsInItemOutPut=[];
-        let allColorsInItem=document.body.querySelector('.cartItem__colors');
+        let allColorsInItem=item.querySelector('.cartItem__colors');
         allColorsInItem=allColorsInItem.childNodes;
         for (let i=1; i<=9; i=i+2){
             allColorsInItemOutPut.push(allColorsInItem[i]);

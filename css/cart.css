@@ -1,0 +1,297 @@
+.main {
+  padding-top: 54px;
+  background: #F2F2F2;
+}
+
+.cart__caption {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: #2D2D2D;
+}
+
+.toBuy__body {
+  background: #FFF;
+  margin-top: 48px;
+}
+
+.toBuy__upsideRow-body {
+  display: flex;
+  width: 100%;
+  height: 41px;
+}
+
+.toBuy__upsideRow-body:nth-child(n) {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #2D2D2D;
+  white-space: nowrap;
+}
+
+.toBuy__picture {
+  flex: 1 0 12.7%;
+  padding-left: 5px;
+}
+
+.toBuy__denomination {
+  flex: 1 0 35%;
+}
+
+.toBuy__goodCode {
+  flex: 1 0 11.7%;
+}
+
+.toBuy__amount {
+  flex: 1 0 16.8%;
+}
+
+.toBuy__cost {
+  flex: 1 0 11.9%;
+}
+
+.toBuy__forAll {
+  flex: 1 0 11.9%;
+}
+
+.toBuy__item-body {
+  display: flex;
+}
+
+.toBuy__imgContainer {
+  flex: 1 0 12.7%;
+}
+.toBuy__imgContainer img {
+  width: 160px;
+}
+
+.toBuy__discription {
+  flex: 1 0 35%;
+}
+
+.toBuy__characteristic {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2D2D2D;
+}
+
+.toBuy__color {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(45, 45, 45, 0.9);
+}
+.toBuy__color span {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: rgba(45, 45, 45, 0.6);
+}
+
+.toBuy__volume {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(45, 45, 45, 0.9);
+}
+.toBuy__volume span {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: rgba(45, 45, 45, 0.6);
+}
+
+.toBuy__codeNumbers {
+  flex: 1 0 11.7%;
+}
+
+.toBuy__codeNumbers-body {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2D2D2D;
+}
+.toBuy__codeNumbers-body span {
+  font-weight: 700;
+}
+
+.toBuy__amountInCart {
+  flex: 1 0 16.8%;
+  display: flex;
+  align-items: center;
+}
+
+.toBuy__minus-cyst {
+  width: 56px;
+  height: 56px;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toBuy__minus {
+  width: 14px;
+  height: 2px;
+  background: rgba(45, 45, 45, 0.6);
+}
+
+.toBuy__amountNumber-body {
+  width: 56px;
+  height: 56px;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toBuy__count {
+  width: 54px;
+  height: 54px;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2D2D2D;
+}
+
+.toBuy__plus-cyst {
+  width: 56px;
+  height: 56px;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.toBuy__plus-first {
+  width: 14px;
+  height: 2px;
+  background: rgb(112, 112, 112);
+}
+
+.toBuy__plus-second {
+  width: 14px;
+  height: 2px;
+  background: rgb(112, 112, 112);
+  position: absolute;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.toBuy__delete {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DF1638;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.toBuy__delete-right {
+  width: 19.8px;
+  height: 2px;
+  background-color: #FFF;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.toBuy__delete-left {
+  width: 19.8px;
+  height: 2px;
+  background-color: #FFF;
+  position: absolute;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.toBuy__perUnit {
+  flex: 1 0 11.9%;
+}
+
+.toBuy__price {
+  font-family: "Abhaya Libre ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+  color: #2D2D2D;
+  display: flex;
+}
+
+.toBuy__priceCurrency {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2D2D2D;
+  position: absolute;
+  transform: translate(70px, 15px);
+}
+
+.toBuy__forAllInUnit {
+  flex: 1 0 11.9%;
+}
+
+.toBuy__priceAll {
+  font-family: "Abhaya Libre ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+  color: #2D2D2D;
+  display: flex;
+}
+
+.toBuy__priceCurrencyAll {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2D2D2D;
+  position: absolute;
+  transform: translate(70px, 15px);
+}

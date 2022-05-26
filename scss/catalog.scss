@@ -28,6 +28,9 @@ padding-top: 70px;
 .cartSpace {
 }
 .cartSpace__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .cartSpace__item {
     max-width: 314px;
@@ -158,6 +161,8 @@ cursor: pointer;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     path {
+        height: 6px;
+        width: 10px;
         fill: gray;
     }
 }
