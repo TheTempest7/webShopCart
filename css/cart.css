@@ -1,6 +1,7 @@
 .main {
   padding-top: 54px;
   background: #F2F2F2;
+  padding-bottom: 54px;
 }
 
 .cart__caption {
@@ -15,6 +16,10 @@
 .toBuy__body {
   background: #FFF;
   margin-top: 48px;
+}
+
+.toBuy__upsideRow {
+  border-bottom: 2px solid #BDBDBD;
 }
 
 .toBuy__upsideRow-body {
@@ -37,7 +42,7 @@
 
 .toBuy__picture {
   flex: 1 0 12.7%;
-  padding-left: 5px;
+  padding-left: 9px;
 }
 
 .toBuy__denomination {
@@ -60,6 +65,15 @@
   flex: 1 0 11.9%;
 }
 
+.toBuy__downsideRow-body {
+  background: #F2F2F2;
+}
+
+.toBuy__item {
+  background-color: #FFF;
+  margin-bottom: 16px;
+}
+
 .toBuy__item-body {
   display: flex;
 }
@@ -68,11 +82,14 @@
   flex: 1 0 12.7%;
 }
 .toBuy__imgContainer img {
-  width: 160px;
+  width: 195px;
 }
 
 .toBuy__discription {
   flex: 1 0 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .toBuy__characteristic {
@@ -120,6 +137,8 @@
 
 .toBuy__codeNumbers {
   flex: 1 0 11.7%;
+  display: flex;
+  align-items: center;
 }
 
 .toBuy__codeNumbers-body {
@@ -248,6 +267,8 @@
 
 .toBuy__perUnit {
   flex: 1 0 11.9%;
+  display: flex;
+  align-items: center;
 }
 
 .toBuy__price {
@@ -273,6 +294,8 @@
 
 .toBuy__forAllInUnit {
   flex: 1 0 11.9%;
+  display: flex;
+  align-items: center;
 }
 
 .toBuy__priceAll {
@@ -294,4 +317,147 @@
   color: #2D2D2D;
   position: absolute;
   transform: translate(70px, 15px);
+}
+
+/*----------------------------(buttomPrice)-----------------------------------*/
+.buttomPrice__caption {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: #2D2D2D;
+  padding-left: 16px;
+  padding-bottom: 12px;
+}
+
+.buttomPrice__content {
+  background-color: #FFF;
+  padding: 24px 16px;
+}
+
+.buttomPriceCntnt__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttomPriceCntnt__left {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 50%;
+}
+
+.leftButtom__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.leftButtom__inputFlexBox {
+  flex: 1 1 auto;
+}
+
+.leftButtom__firstLabel {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(45, 45, 45, 0.9);
+}
+
+.leftButtom__input {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(45, 45, 45, 0.6);
+  padding: 12px 16px;
+  border: 1px solid #E0E0E0;
+}
+
+.leftButtom__button {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 14px 24px;
+  background-color: #DF1638;
+  margin-left: 8px;
+}
+
+.leftButtom__buttomButton-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.leftButtom__bigButton {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 16px 32px;
+  background: #272727;
+  max-width: 258px;
+}
+
+.rightButtom__body {
+  margin-top: 104px;
+}
+
+.rightButtom__preliminarily {
+  font-family: "Abyssinica SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-end;
+}
+
+.rightButtom__preliminarily-number {
+  font-family: "Abhaya Libre ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+  color: #2D2D2D;
+  margin-left: 8px;
+}
+
+.rightButtom__currency {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2D2D2D;
+}
+
+.rightButtom__checkOut-body {
+  padding: 16px 32px;
+  margin-top: 51px;
+}
+
+.rightButtom__checkOut {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 16px 32px;
+  background-color: #DF1638;
 }

@@ -162,6 +162,8 @@
   -o-border-radius: 50%;
 }
 .cartItem__yellow path {
+  height: 6px;
+  width: 10px;
   fill: gray;
 }
 
