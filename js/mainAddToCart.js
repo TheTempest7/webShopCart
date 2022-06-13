@@ -84,6 +84,7 @@ function setStorage(product){
         let banerOfNum=document.body.querySelector('.iconsHeader__numbersInCart');
         banerOfNum.classList.add('showMe');
         banerOfNum.innerHTML=productsNumbers;
+        location.reload();
     }
     else{
         localStorage.setItem('cartNumbers',1);
@@ -92,11 +93,11 @@ function setStorage(product){
             banerOfNum.classList.add('showMe');
             banerOfNum.innerHTML=1;
         }
-
+        location.reload();
     }
     setItem(product)
 }
-console.log(1);
+
 function setItem(product){
     let cartItems=localStorage.getItem('productsInCart');
     cartItems=JSON.parse(cartItems);
@@ -136,7 +137,7 @@ function countTotalPrice(product){
 function displayCart(){
 let cartItems=JSON.parse(localStorage.getItem('productsInCart'));
 let productsInnerPoint=document.body.querySelector('.toBuy__downsideRow-body');
-console.log(productsInnerPoint);
+console.log(cartItems);
 
 if(cartItems && productsInnerPoint){
     productsInnerPoint.innerHTML='';
@@ -150,7 +151,7 @@ if(cartItems && productsInnerPoint){
             </div>
             <div class="toBuy__discription">
                 <div class="toBuy__characteristic">
-                    Краска для винила и кожи белая MOTIP 400мл 04065 
+                    Краска для винила и кожи белая <span class="toBuy__characteristic-span"> ${item.name}</span> 400мл 04065 
                 </div>
                 <div class="toBuy__color">
                     <span>Цвет:</span>    Белый
@@ -196,7 +197,7 @@ if(cartItems && productsInnerPoint){
                 </div>
             </div>
             <div class="toBuy__forAllInUnit">
-                <div class="toBuy__priceAll">${item.inCart*item.price}
+                <div class="toBuy__priceAll">${(item.inCart*item.price).toFixed(2)}
                     <p class="toBuy__priceCurrencyAll">грн.</p>
                 </div>
             </div>
@@ -208,7 +209,71 @@ if(cartItems && productsInnerPoint){
     let allPriceInnerPoint=document.body.querySelectorAll('.rightButtom__preliminarily-number');
     console.log(allPriceInnerPoint[2]);
     allPriceInnerPoint[2].innerHTML='';
-    allPriceInnerPoint[2].innerHTML+=(+cartCost).toFixed(2) ;
+    allPriceInnerPoint[2].innerHTML+=(+cartCost).toFixed(2);
+    let deleteButtons=document.body.querySelectorAll('.toBuy__delete-body');/**-----------------(function which delete item from cart)------------------ */
+    deleteButtons.forEach(i=>i.addEventListener('click',()=>{
+        let name=i.closest('.toBuy__item-body').querySelector('.toBuy__characteristic-span').innerHTML;
+        let totalCostDeletingItem=cartItems[name.trim()]['price']*cartItems[name.trim()]['inCart'];
+        let inCartDeletingItem=cartItems[name.trim()]['inCart'];
+        delete cartItems[name.trim()];
+        if(Object.keys(cartItems).length>0){
+            localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+            localStorage.setItem('totalCost',+(localStorage.getItem('totalCost'))-totalCostDeletingItem);
+            localStorage.setItem('cartNumbers',+(localStorage.getItem('cartNumbers'))-inCartDeletingItem);
+            location.reload();
+        }
+        else{
+            localStorage.removeItem('productsInCart');
+            localStorage.removeItem('totalCost');
+            localStorage.removeItem('cartNumbers');
+            location.reload();
+        }
+        
+    }))
+
+    let increaseButtons=document.body.querySelectorAll('.toBuy__plus-body');/**----------------(function which increaseing item in cart) ----------------------*/
+    increaseButtons.forEach(i=>i.addEventListener('click',()=>{
+        let name=i.closest('.toBuy__item-body').querySelector('.toBuy__characteristic-span').innerHTML;
+        cartItems[name.trim()]['inCart']+=1;
+        localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+        localStorage.setItem('cartNumbers',+(localStorage.getItem('cartNumbers'))+1);
+        localStorage.setItem('totalCost', +(localStorage.getItem('totalCost'))+1*cartItems[name.trim()]['price']);
+        location.reload();
+    }))
+
+
+    let decreaseButtons=document.body.querySelectorAll('.toBuy__minus-body');/**----------------(function which increaseing item in cart) ----------------------*/
+    decreaseButtons.forEach(i=>i.addEventListener('click',()=>{
+        let name=i.closest('.toBuy__item-body').querySelector('.toBuy__characteristic-span').innerHTML;
+        if( cartItems[name.trim()]['inCart']>1){
+            cartItems[name.trim()]['inCart']-=1;
+            localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+            localStorage.setItem('cartNumbers',+(localStorage.getItem('cartNumbers'))-1);
+            localStorage.setItem('totalCost', +(localStorage.getItem('totalCost'))-1*cartItems[name.trim()]['price']);
+            location.reload();
+            console.log(cartItems);
+        }
+        else{
+            let localPrice=cartItems[name.trim()]['price'];
+            delete cartItems[name.trim()];
+            localStorage.setItem('productsInCart',JSON.stringify(cartItems));
+            localStorage.setItem('cartNumbers',+(localStorage.getItem('cartNumbers'))-1);
+            localStorage.setItem('totalCost', +(localStorage.getItem('totalCost'))-1*localPrice);
+            console.log(cartItems);
+            location.reload();
+            
+            if(Object.keys(cartItems).length==0){
+                localStorage.removeItem('productsInCart');
+                localStorage.removeItem('totalCost');
+                localStorage.removeItem('cartNumbers');
+                console.log(cartItems);
+                location.reload();
+                
+            }
+        }
+
+    }))
 }
 }
 displayCart();
+
